@@ -49,11 +49,7 @@
             };
 
             preBuild = ''
-              pushd beancount_import
-              mkdir frontend
               ln -s ${beancount_import-node.nodeDependencies}/lib/node_modules frontend/node_modules
-              export PATH="${beancount_import-node.nodeDependencies}/bin:$PATH"
-              popd
             '';
 
             # pipInstallFlags = [ "--install-option='--skip_npm_reinstall'" ];
